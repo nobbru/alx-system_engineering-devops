@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-# ALX System Engineering DevOps
+# ALX System Engineering DevOps project
 
 This is repository that I am using to study DevsOps at ALX Programme.
 =======
