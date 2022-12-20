@@ -1,2 +1,6 @@
 #!/bin/bash
+<<<<<<< HEAD
 echo $(cut -c 1 | tr -d "\n")
+=======
+cut -c 1 | paste -s -d ''
+>>>>>>> a064d6fab20aa96d48e8704b06e29501b88ea842

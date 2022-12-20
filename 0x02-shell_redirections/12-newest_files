@@ -1,2 +1,6 @@
 #!/bin/bash
+<<<<<<< HEAD
 ls --format=single-column -t | head
+=======
+ls -t | head -n 10
+>>>>>>> a064d6fab20aa96d48e8704b06e29501b88ea842
