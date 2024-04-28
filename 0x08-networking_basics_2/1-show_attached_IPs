@@ -8,7 +8,6 @@
 sudo apt install net-tools
 if command -v ip &> /dev/null; then
     # Use ip command to get IPv4 addresses
-    sudo apt install net-tools
     ip addr show | awk '/inet / {print $2}' | cut -d '/' -f1
 elif command -v ifconfig &> /dev/null; then
     # Use ifconfig command as fallback
@@ -19,3 +18,5 @@ elif command -v hostname &> /dev/null; then
 else
     echo "Unable to retrieve IPv4 addresses. No suitable command found."
 fi
+
+chmod +x 1-show_attached_IPs
