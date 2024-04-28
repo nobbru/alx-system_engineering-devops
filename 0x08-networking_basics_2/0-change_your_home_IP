@@ -9,15 +9,15 @@ tmp_hosts=$(mktemp)
 new_hosts="127.0.0.2		localhost\n8.8.8.8		facebook.com"
 
 # Copy the original hosts file to the temporary file
-sudo cp "/etc/hosts $tmp_hosts"
+sudo cp /etc/hosts "$tmp_hosts"
 
 # Update the temporary file with new hosts entries
-echo -e $new_hosts | sudo tee -a $tmp_hosts > /dev/null
+echo -e "$new_hosts" | sudo tee -a "$tmp_hosts" > /dev/null
 
 # Replace the original hosts file with the updated temporary file
-sudo cp -f $tmp_hosts /etc/hosts
+sudo cp -f "$tmp_hosts" /etc/hosts
 
 # Clean up temporary file
-rm $tmp_hosts
+rm "$tmp_hosts"
 
 chmod +x 0-change_your_home_IP
