@@ -5,8 +5,10 @@
 #ip -4 -o addr show | awk '{print $4}' | cut -d "/" -f 1
 #chmod +x 1-show_attached_IPs.sh
 #./1-show_attached_IPs.sh
+sudo apt install net-tools
 if command -v ip &> /dev/null; then
     # Use ip command to get IPv4 addresses
+    sudo apt install net-tools
     ip addr show | awk '/inet / {print $2}' | cut -d '/' -f1
 elif command -v ifconfig &> /dev/null; then
     # Use ifconfig command as fallback
